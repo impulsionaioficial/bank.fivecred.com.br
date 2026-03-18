@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
-import "./globals.css";
+import "./global.css";
 import Navbar from "@/components/Navbar.tsx";
 import Footer from "@/components/Footer.tsx";
 
