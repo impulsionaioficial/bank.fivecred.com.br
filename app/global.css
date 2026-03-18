@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #0a0e1a;
+  --navy-light: #111827;
+  --navy-mid: #0f172a;
+  --gold: #c9a84c;
+  --gold-light: #e2c47e;
+  --gold-dark: #a07830;
+  --white: #f8f7f4;
+}
+
+@layer base {
+  body {
+    background-color: var(--navy);
+    color: var(--white);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-playfair);
+  }
+
+  p, span, a, button {
+    font-family: var(--font-inter);
+  }
+}
+
+@layer utilities {
+  .bg-navy { background-color: var(--navy); }
+  .bg-navy-light { background-color: var(--navy-light); }
+  .bg-navy-mid { background-color: var(--navy-mid); }
+  .text-gold { color: var(--gold); }
+  .text-gold-light { color: var(--gold-light); }
+  .border-gold { border-color: var(--gold); }
+  .bg-gold { background-color: var(--gold); }
+
+  .gold-gradient {
+    background: linear-gradient(135deg, #c9a84c, #e2c47e, #a07830);
+  }
+
+  .navy-gradient {
+    background: linear-gradient(180deg, #0a0e1a 0%, #111827 100%);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #c9a84c, #e2c47e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(201, 168, 76, 0.15);
+  }
+
+  .glass-hover:hover {
+    background: rgba(201, 168, 76, 0.07);
+    border-color: rgba(201, 168, 76, 0.35);
+    transition: all 0.3s ease;
+  }
+
+  .divider-gold {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #c9a84c, transparent);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: rgba(201, 168, 76, 0.3);
+  color: #f8f7f4;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0e1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c9a84c;
+  border-radius: 3px;
+}
