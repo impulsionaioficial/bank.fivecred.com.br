@@ -1,9 +1,9 @@
-import Hero from "@/components/home/Hero";
-import Stats from "@/components/home/Stats";
-import Products from "@/components/home/Products";
-import WhyUs from "@/components/home/WhyUs";
-import Testimonials from "@/components/home/Testimonials";
-import CTA from "@/components/home/CTA";
+import Hero from "@/app/home/Hero";
+import Stats from "@/app/home/Stats";
+import Products from "@/app/home/Products";
+import WhyUs from "@/app/home/WhyUs";
+import Testimonials from "@/app/home/Testimonials";
+import CTA from "@/app/home/CTA";
 
 export default function HomePage() {
   return (
