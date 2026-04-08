@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight, Shield, Star, CheckCircle2 } from "lucide-react";
 
 export default function Hero() {
