@@ -4,137 +4,152 @@ import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 
 export default function ContatoPage() {
   return (
-    <div className="min-h-screen bg-navy pt-32 pb-24">
+    <div className="min-h-screen bg-white pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <p className="text-gold text-xs tracking-[0.3em] uppercase mb-3 font-medium">Contato</p>
-          <h1 className="font-serif text-5xl md:text-6xl text-cream font-bold mb-6">
-            Fale com o <span className="text-gradient">Five Bank.</span>
+        <div className="text-center mb-20">
+          <p className="text-orange text-xs tracking-[0.4em] uppercase mb-4 font-bold">Contato</p>
+          <h1 className="font-serif text-5xl md:text-7xl text-dark font-bold mb-8">
+            Estamos aqui para <br />
+            <span className="text-orange">ouvir você.</span>
           </h1>
-          <p className="text-cream/50 max-w-xl mx-auto text-sm leading-relaxed">
-            Estamos prontos para atender você. Escolha o canal mais conveniente e nossa equipe responderá o mais breve possível.
+          <p className="text-gray max-w-xl mx-auto text-lg leading-relaxed">
+            Escolha o canal que preferir ou envie uma mensagem através do formulário abaixo. Nossa equipe retornará em breve.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Form */}
-          <div className="glass rounded-2xl p-8">
-            <h2 className="font-serif text-2xl text-cream font-bold mb-6">Envie uma mensagem</h2>
-            <form className="space-y-5">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="bg-white border border-gray/5 rounded-[40px] p-10 md:p-12 shadow-2xl shadow-orange/5">
+            <h2 className="font-serif text-3xl text-dark font-bold mb-8 tracking-tight">Envie sua mensagem</h2>
+            <form className="space-y-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label className="text-cream/60 text-xs uppercase tracking-wider block mb-2">Nome</label>
+                  <label className="text-dark font-bold text-xs uppercase tracking-widest block mb-1.5 ml-1">Nome</label>
                   <input
                     type="text"
-                    placeholder="Seu nome completo"
-                    className="w-full bg-white/5 border border-gold/15 rounded-xl px-4 py-3 text-cream text-sm placeholder:text-cream/25 focus:outline-none focus:border-gold/50 transition-colors"
+                    placeholder="Nome completo"
+                    className="w-full bg-off-white border border-gray/10 rounded-2xl px-5 py-4 text-dark text-base placeholder:text-gray/40 focus:outline-none focus:border-orange/30 transition-all"
                   />
                 </div>
                 <div>
-                  <label className="text-cream/60 text-xs uppercase tracking-wider block mb-2">Telefone</label>
+                  <label className="text-dark font-bold text-xs uppercase tracking-widest block mb-1.5 ml-1">Telefone</label>
                   <input
                     type="tel"
                     placeholder="(11) 99999-9999"
-                    className="w-full bg-white/5 border border-gold/15 rounded-xl px-4 py-3 text-cream text-sm placeholder:text-cream/25 focus:outline-none focus:border-gold/50 transition-colors"
+                    className="w-full bg-off-white border border-gray/10 rounded-2xl px-5 py-4 text-dark text-base placeholder:text-gray/40 focus:outline-none focus:border-orange/30 transition-all"
                   />
                 </div>
               </div>
               <div>
-                <label className="text-cream/60 text-xs uppercase tracking-wider block mb-2">E-mail</label>
+                <label className="text-dark font-bold text-xs uppercase tracking-widest block mb-1.5 ml-1">E-mail</label>
                 <input
                   type="email"
                   placeholder="seu@email.com.br"
-                  className="w-full bg-white/5 border border-gold/15 rounded-xl px-4 py-3 text-cream text-sm placeholder:text-cream/25 focus:outline-none focus:border-gold/50 transition-colors"
+                  className="w-full bg-off-white border border-gray/10 rounded-2xl px-5 py-4 text-dark text-base placeholder:text-gray/40 focus:outline-none focus:border-orange/30 transition-all"
                 />
               </div>
               <div>
-                <label className="text-cream/60 text-xs uppercase tracking-wider block mb-2">Assunto</label>
-                <select className="w-full bg-navy border border-gold/15 rounded-xl px-4 py-3 text-cream/70 text-sm focus:outline-none focus:border-gold/50 transition-colors">
-                  <option value="">Selecione um assunto</option>
-                  <option>Crédito Consignado</option>
-                  <option>Cartão Premium</option>
-                  <option>Portabilidade</option>
-                  <option>Home Equity</option>
-                  <option>Empréstimo FGTS</option>
-                  <option>Outros</option>
-                </select>
+                <label className="text-dark font-bold text-xs uppercase tracking-widest block mb-1.5 ml-1">Assunto</label>
+                <div className="relative">
+                  <select className="w-full bg-off-white border border-gray/10 rounded-2xl px-5 py-4 text-dark text-base focus:outline-none focus:border-orange/30 transition-all appearance-none">
+                    <option value="">Selecione um assunto</option>
+                    <option>Crédito Consignado</option>
+                    <option>Cartão de Crédito</option>
+                    <option>Portabilidade</option>
+                    <option>Empréstimo FGTS</option>
+                    <option>Outros</option>
+                  </select>
+                </div>
               </div>
               <div>
-                <label className="text-cream/60 text-xs uppercase tracking-wider block mb-2">Mensagem</label>
+                <label className="text-dark font-bold text-xs uppercase tracking-widest block mb-1.5 ml-1">Mensagem</label>
                 <textarea
                   rows={4}
-                  placeholder="Como podemos ajudar você?"
-                  className="w-full bg-white/5 border border-gold/15 rounded-xl px-4 py-3 text-cream text-sm placeholder:text-cream/25 focus:outline-none focus:border-gold/50 transition-colors resize-none"
+                  placeholder="Como podemos ajudar?"
+                  className="w-full bg-off-white border border-gray/10 rounded-2xl px-5 py-4 text-dark text-base placeholder:text-gray/40 focus:outline-none focus:border-orange/30 transition-all resize-none"
                 />
               </div>
               <button
                 type="submit"
-                className="w-full gold-gradient text-navy font-semibold py-4 rounded-xl text-sm hover:opacity-90 transition-all shadow-lg shadow-gold/20 flex items-center justify-center gap-2"
+                className="w-full orange-gradient text-white font-bold py-5 rounded-2xl text-base hover:shadow-2xl hover:shadow-orange/20 transition-all flex items-center justify-center gap-3 group"
               >
-                <Send size={16} />
-                Enviar mensagem
+                <Send size={20} className="group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
+                Enviar Mensagem
               </button>
             </form>
           </div>
 
           {/* Info */}
-          <div className="space-y-6">
-            {[
-              {
-                icon: Phone,
-                title: "Telefone",
-                info: "(11) 98995-6521",
-                sub: "Segunda a sexta, 8h às 18h",
-              },
-              {
-                icon: Mail,
-                title: "E-mail",
-                info: "contato@fivebank.com.br",
-                sub: "Resposta em até 24 horas",
-              },
-              {
-                icon: MapPin,
-                title: "Endereço",
-                info: "Av. Brigadeiro Faria Lima",
-                sub: "São Paulo — SP",
-              },
-              {
-                icon: Clock,
-                title: "Horário de atendimento",
-                info: "Segunda a Sexta: 8h — 18h",
-                sub: "Sábado: 9h — 13h",
-              },
-            ].map((item, i) => {
-              const Icon = item.icon;
-              return (
-                <div key={i} className="glass glass-hover rounded-xl p-6 flex items-center gap-5 transition-all duration-300">
-                  <div className="w-12 h-12 rounded-xl gold-gradient flex items-center justify-center shrink-0 shadow-md shadow-gold/20">
-                    <Icon size={18} className="text-navy" />
+          <div className="space-y-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {[
+                {
+                  icon: Phone,
+                  title: "Fone/WhatsApp",
+                  info: "(11) 98995-6521",
+                  sub: "Canais oficiais",
+                },
+                {
+                  icon: Mail,
+                  title: "E-mail Direto",
+                  info: "contato@fivecred.com.br",
+                  sub: "Suporte especializado",
+                },
+              ].map((item, i) => {
+                const Icon = item.icon;
+                return (
+                  <div key={i} className="bg-white border border-gray/5 rounded-3xl p-8 flex flex-col gap-4 shadow-xl shadow-orange/5">
+                    <div className="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center shrink-0">
+                      <Icon size={22} className="text-orange" />
+                    </div>
+                    <div>
+                      <p className="text-dark font-bold text-xs uppercase tracking-widest mb-1.5">{item.title}</p>
+                      <p className="text-dark font-bold text-lg">{item.info}</p>
+                      <p className="text-gray text-xs font-medium">{item.sub}</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-cream/40 text-xs uppercase tracking-wider mb-0.5">{item.title}</p>
-                    <p className="text-cream font-semibold text-sm">{item.info}</p>
-                    <p className="text-cream/40 text-xs mt-0.5">{item.sub}</p>
-                  </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
+
+            <div className="bg-white border border-gray/5 rounded-3xl p-8 flex items-center gap-8 shadow-xl shadow-orange/5">
+              <div className="w-14 h-14 rounded-2xl orange-gradient flex items-center justify-center shrink-0">
+                <MapPin size={26} className="text-white" />
+              </div>
+              <div>
+                <p className="text-dark font-bold text-xs uppercase tracking-widest mb-1.5">Nossa Sede</p>
+                <p className="text-dark font-bold text-lg">Av. Brigadeiro Faria Lima, 2026</p>
+                <p className="text-gray text-sm font-medium">São Paulo — SP, Brasil</p>
+              </div>
+            </div>
+
+            <div className="bg-white border border-gray/5 rounded-3xl p-8 flex items-center gap-8 shadow-xl shadow-orange/5">
+              <div className="w-14 h-14 rounded-2xl bg-orange/10 flex items-center justify-center shrink-0">
+                <Clock size={26} className="text-orange" />
+              </div>
+              <div>
+                <p className="text-dark font-bold text-xs uppercase tracking-widest mb-1.5">Atendimento</p>
+                <p className="text-dark font-bold text-lg">Segunda a Sexta: 08h — 18h</p>
+                <p className="text-gray text-sm font-medium">Sábados: 09h — 13h</p>
+              </div>
+            </div>
 
             {/* WhatsApp CTA */}
-            <div className="glass rounded-xl p-6 border border-gold/20 relative overflow-hidden">
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(201,168,76,0.06),transparent_70%)]" />
-              <div className="relative">
-                <p className="text-cream font-serif text-lg font-bold mb-2">Prefere o WhatsApp?</p>
-                <p className="text-cream/50 text-sm mb-4">
-                  Fale diretamente com um especialista agora mesmo. Atendimento rápido e humanizado.
+            <div className="bg-dark rounded-[40px] p-10 relative overflow-hidden shadow-2xl group">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-orange/15 rounded-full blur-2xl -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500" />
+              <div className="relative z-10">
+                <p className="text-white font-serif text-2xl font-bold mb-4">Dúvidas rápidas?</p>
+                <p className="text-gray-light text-base mb-8 opacity-80">
+                  Fale com um especialista via WhatsApp agora mesmo e resolva suas pendências em minutos.
                 </p>
                 <a
                   href="https://wa.me/5511989956521"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 gold-gradient text-navy font-semibold px-5 py-2.5 rounded-lg text-sm hover:opacity-90 transition-all"
+                  className="inline-flex items-center gap-3 orange-gradient text-white font-bold px-8 py-4 rounded-2xl text-base hover:shadow-orange/30 hover:shadow-2xl transition-all"
                 >
-                  Abrir WhatsApp
+                  <Phone size={20} />
+                  Chamar no WhatsApp
                 </a>
               </div>
             </div>

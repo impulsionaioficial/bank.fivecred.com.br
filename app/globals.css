@@ -3,23 +3,24 @@
 @tailwind utilities;
 
 :root {
-  --navy: #0a0e1a;
-  --navy-light: #111827;
-  --navy-mid: #252629;
-  --gold: #c9a84c;
-  --gold-light: #e2c47e;
-  --gold-dark: #a07830;
-  --white: #f8f7f4;
+  --orange: #E8603D;
+  --orange-light: #ff7b57;
+  --orange-dark: #cf4b2d;
+  --white: #ffffff;
+  --off-white: #f9fafb;
+  --dark: #111827;
+  --gray: #4b5563;
 }
 
 @layer base {
   body {
-    background-color: var(--navy);
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--dark);
   }
 
   h1, h2, h3, h4 {
     font-family: var(--font-playfair);
+    color: var(--dark);
   }
 
   p, span, a, button {
@@ -28,44 +29,43 @@
 }
 
 @layer utilities {
-  .bg-navy { background-color: var(--navy); }
-  .bg-navy-light { background-color: var(--navy-light); }
-  .bg-navy-mid { background-color: var(--navy-mid); }
-  .text-gold { color: var(--gold); }
-  .text-gold-light { color: var(--gold-light); }
-  .border-gold { border-color: var(--gold); }
-  .bg-gold { background-color: var(--gold); }
+  .bg-white-section { background-color: var(--white); }
+  .bg-off-white { background-color: var(--off-white); }
+  .text-orange { color: var(--orange); }
+  .text-orange-light { color: var(--orange-light); }
+  .border-orange { border-color: var(--orange); }
+  .bg-orange { background-color: var(--orange); }
 
-  .gold-gradient {
-    background: linear-gradient(135deg, #c9a84c, #e2c47e, #a07830);
+  .orange-gradient {
+    background: linear-gradient(135deg, #E8603D, #ff7b57);
   }
 
-  .navy-gradient {
-    background: linear-gradient(180deg, #0a0e1a 0%, #111827 100%);
+  .white-gradient {
+    background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, #c9a84c, #e2c47e);
+    background: linear-gradient(135deg, #E8603D, #cf4b2d);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .glass {
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(201, 168, 76, 0.15);
+    border: 1px solid rgba(232, 96, 61, 0.1);
   }
 
   .glass-hover:hover {
-    background: rgba(201, 168, 76, 0.07);
-    border-color: rgba(201, 168, 76, 0.35);
+    background: rgba(232, 96, 61, 0.05);
+    border-color: rgba(232, 96, 61, 0.2);
     transition: all 0.3s ease;
   }
 
-  .divider-gold {
+  .divider-orange {
     height: 1px;
-    background: linear-gradient(90deg, transparent, #c9a84c, transparent);
+    background: linear-gradient(90deg, transparent, #E8603D, transparent);
   }
 }
 

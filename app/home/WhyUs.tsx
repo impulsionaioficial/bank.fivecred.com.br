@@ -25,50 +25,50 @@ const reasons = [
 
 export default function WhyUs() {
   return (
-    <section className="py-24 bg-navy-mid">
+    <section className="py-24 bg-off-white">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           {/* Left */}
           <div>
-            <p className="text-gold text-xs tracking-[0.3em] uppercase mb-3 font-medium">
-              Por que nos escolher
+            <p className="text-orange text-xs tracking-[0.3em] uppercase mb-4 font-bold">
+              Diferenciais FiveCred
             </p>
-            <h2 className="font-serif text-4xl md:text-5xl text-cream font-bold leading-tight mb-6">
-              Um banco feito para <span className="text-gradient">quem exige mais.</span>
+            <h2 className="font-serif text-4xl md:text-5xl text-dark font-bold leading-tight mb-8">
+              Um banco feito para <span className="text-orange">quem busca excelência.</span>
             </h2>
-            <p className="text-cream/50 leading-relaxed mb-8 text-sm">
-              O Five Bank nasceu do ecossistema FiveCred com um propósito claro: democratizar o acesso ao crédito de qualidade. Combinamos tecnologia de ponta com atendimento humanizado para entregar uma experiência financeira verdadeiramente premium.
+            <p className="text-gray leading-relaxed mb-10 text-lg">
+              A FiveCred nasceu com um propósito claro: democratizar o acesso ao crédito de qualidade através da tecnologia e transparência. Combinamos agilidade digital com o cuidado de um atendimento humanizado para entregar uma experiência financeira superior.
             </p>
-            <div className="divider-gold mb-8" />
-            <div className="flex items-center gap-6 text-sm text-cream/50">
+            <div className="divider-orange mb-10" />
+            <div className="flex items-center gap-8">
               <div>
-                <span className="font-serif text-3xl text-gold font-bold">5+</span>
-                <p className="text-xs mt-1">Anos de mercado</p>
+                <span className="font-serif text-4xl text-orange font-bold">5+</span>
+                <p className="text-dark font-medium text-xs mt-2 uppercase tracking-widest">Anos de expertise</p>
               </div>
-              <div className="w-px h-10 bg-gold/20" />
+              <div className="w-px h-12 bg-orange/20" />
               <div>
-                <span className="font-serif text-3xl text-gold font-bold">A+</span>
-                <p className="text-xs mt-1">Avaliação de crédito</p>
+                <span className="font-serif text-4xl text-orange font-bold">A+</span>
+                <p className="text-dark font-medium text-xs mt-2 uppercase tracking-widest">Rating de crédito</p>
               </div>
-              <div className="w-px h-10 bg-gold/20" />
+              <div className="w-px h-12 bg-orange/20" />
               <div>
-                <span className="font-serif text-3xl text-gold font-bold">SP</span>
-                <p className="text-xs mt-1">Sede em São Paulo</p>
+                <span className="font-serif text-4xl text-orange font-bold">SP</span>
+                <p className="text-dark font-medium text-xs mt-2 uppercase tracking-widest">Presença nacional</p>
               </div>
             </div>
           </div>
 
           {/* Right */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {reasons.map((reason, i) => {
               const Icon = reason.icon;
               return (
-                <div key={i} className="glass glass-hover rounded-xl p-6 transition-all duration-300">
-                  <div className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center mb-4">
-                    <Icon size={18} className="text-gold" />
+                <div key={i} className="bg-white border border-gray/5 rounded-2xl p-8 hover:shadow-xl hover:shadow-orange/5 transition-all duration-300">
+                  <div className="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center mb-6">
+                    <Icon size={24} className="text-orange" />
                   </div>
-                  <h4 className="font-serif text-cream font-semibold mb-2">{reason.title}</h4>
-                  <p className="text-cream/45 text-xs leading-relaxed">{reason.desc}</p>
+                  <h4 className="font-serif text-dark text-xl font-bold mb-3">{reason.title}</h4>
+                  <p className="text-gray text-sm leading-relaxed">{reason.desc}</p>
                 </div>
               );
             })}

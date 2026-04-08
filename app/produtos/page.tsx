@@ -5,84 +5,87 @@ const products = [
   {
     icon: Landmark,
     title: "Crédito Consignado",
-    tag: "Mais procurado",
-    rate: "A partir de 1,2% a.m.",
-    desc: "Empréstimo com desconto em folha de pagamento, disponível para servidores públicos, aposentados e pensionistas do INSS.",
-    features: ["Sem consulta ao SPC/Serasa", "Aprovação em até 24h", "Prazo de até 96 meses", "Processo 100% digital"],
+    tag: "Destaque",
+    rate: "Taxas a partir de 1,2% a.m.",
+    desc: "Empréstimo com desconto em folha, disponível para servidores públicos, aposentados e pensionistas do INSS com total segurança.",
+    features: ["Aprovação rápida", "Sem consulta ao SPC", "Prazos flexíveis", "Processo 100% digital"],
   },
   {
     icon: CreditCard,
-    title: "Cartão Consignado Premium",
+    title: "Cartão de Crédito",
     tag: "Exclusivo",
-    rate: "Limite pré-aprovado",
-    desc: "Cartão de crédito com desconto automático em folha, limite diferenciado e benefícios exclusivos para nossos clientes.",
-    features: ["Programa de pontos Five", "Sem anuidade no 1º ano", "Aceito em todo o mundo", "App de controle"],
+    rate: "Limite Diferenciado",
+    desc: "Benefícios exclusivos e taxas reduzidas. Um cartão desenhado para quem busca praticidade no dia a dia.",
+    features: ["Sem anuidade", "Aceito internacionalmente", "Controle via app", "Saques em dinheiro"],
   },
   {
     icon: RefreshCw,
-    title: "Portabilidade de Crédito",
-    tag: "Economia garantida",
-    rate: "Reduza suas parcelas",
-    desc: "Transfira seu empréstimo de outro banco para o Five Bank e pague menos. Processo simples, rápido e sem custos.",
-    features: ["Análise gratuita", "Sem burocracia", "Economia comprovada", "Suporte dedicado"],
+    title: "Portabilidade",
+    tag: "Economia",
+    rate: "Reduza seus juros",
+    desc: "Traga seu contrato para a FiveCred e diminua o valor das parcelas. Economia real para o seu bolso.",
+    features: ["Análise imediata", "Zero custo operacional", "Suporte especializado", "Quitação rápida"],
   },
   {
     icon: Home,
-    title: "Home Equity",
-    tag: "Alta liquidez",
-    rate: "Taxas especiais",
-    desc: "Use seu imóvel quitado como garantia e acesse grandes volumes de crédito com taxas muito abaixo do mercado.",
-    features: ["Até 60% do valor do imóvel", "Prazo de até 180 meses", "Taxas a partir de 0,8% a.m.", "Imóvel permanece com você"],
+    title: "Crédito com Garantia",
+    tag: "Baixos Juros",
+    rate: "Oportunidade Real",
+    desc: "Use seu patrimônio para acessar as menores taxas do mercado, sem precisar se desfazer de nada.",
+    features: ["Carencia estendida", "Prazos longos", "Baixo custo mensal", "Liquidez imediata"],
   },
   {
     icon: FileText,
-    title: "Empréstimo FGTS",
-    tag: "Antecipação",
-    rate: "Use seu saque-aniversário",
-    desc: "Antecipe seu FGTS pelo saque-aniversário e tenha dinheiro na conta de forma rápida com taxas competitivas.",
-    features: ["Sem comprometer renda mensal", "Aprovação imediata", "FGTS como garantia", "Sem IOF inicial"],
+    title: "Antecipação FGTS",
+    tag: "Praticidade",
+    rate: "Saque-Aniversário",
+    desc: "Acesse o seu saldo do FGTS sem comprometer sua renda mensal. Dinheiro na conta em poucas horas.",
+    features: ["Sem parcelas mensais", "Taxas reduzidas", "Mínima burocracia", "100% seguro"],
   },
 ];
 
 export default function ProdutosPage() {
   return (
-    <div className="min-h-screen bg-navy pt-32 pb-24">
+    <div className="min-h-screen bg-white pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <p className="text-gold text-xs tracking-[0.3em] uppercase mb-3 font-medium">Portfólio</p>
-          <h1 className="font-serif text-5xl md:text-6xl text-cream font-bold mb-6">
-            Produtos feitos para <span className="text-gradient">você crescer.</span>
+        <div className="text-center mb-20">
+          <p className="text-orange text-xs tracking-[0.4em] uppercase mb-4 font-bold">Nosso Portfólio</p>
+          <h1 className="font-serif text-5xl md:text-7xl text-dark font-bold mb-8">
+            Soluções para cada <br />
+            <span className="text-orange">etapa da vida.</span>
           </h1>
-          <p className="text-cream/50 max-w-xl mx-auto text-sm leading-relaxed">
-            Cada produto do Five Bank foi desenvolvido com foco em quem merece o melhor: condições transparentes, taxas justas e atendimento de excelência.
+          <p className="text-gray max-w-xl mx-auto text-lg leading-relaxed">
+            Descubra as condições exclusivas que a FiveCred preparou para você conquistar seus objetivos com inteligência financeira.
           </p>
         </div>
 
-        <div className="space-y-6">
+        <div className="space-y-8">
           {products.map((product, i) => {
             const Icon = product.icon;
             return (
-              <div key={i} className="glass glass-hover rounded-2xl p-8 md:p-10 transition-all duration-300 group">
-                <div className="flex flex-col md:flex-row md:items-center gap-8">
-                  <div className="flex items-start gap-5 md:w-1/2">
-                    <div className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center shrink-0 group-hover:bg-gold/20 transition-colors">
-                      <Icon size={24} className="text-gold" />
+              <div key={i} className="bg-white border border-gray/5 rounded-[40px] p-8 md:p-12 hover:shadow-2xl hover:shadow-orange/5 transition-all duration-300 group overflow-hidden relative">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-orange/5 rounded-full blur-2xl -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500" />
+                
+                <div className="flex flex-col md:flex-row md:items-center gap-10 relative z-10">
+                  <div className="flex items-start gap-6 md:w-1/2">
+                    <div className="w-16 h-16 rounded-2xl orange-gradient flex items-center justify-center shrink-0 shadow-lg shadow-orange/20">
+                      <Icon size={30} className="text-white" />
                     </div>
                     <div>
-                      <div className="flex items-center gap-3 mb-2">
-                        <h3 className="font-serif text-xl text-cream font-bold">{product.title}</h3>
-                        <span className="text-xs text-gold bg-gold/10 px-2.5 py-1 rounded-full">{product.tag}</span>
+                      <div className="flex items-center gap-4 mb-3">
+                        <h3 className="font-serif text-2xl text-dark font-bold tracking-tight">{product.title}</h3>
+                        <span className="text-[10px] items-center py-1 px-3 bg-orange/10 text-orange font-bold rounded-full uppercase tracking-wider">{product.tag}</span>
                       </div>
-                      <p className="text-gold text-sm font-medium mb-3">{product.rate}</p>
-                      <p className="text-cream/50 text-sm leading-relaxed">{product.desc}</p>
+                      <p className="text-orange font-bold text-sm mb-4">{product.rate}</p>
+                      <p className="text-gray text-base leading-relaxed">{product.desc}</p>
                     </div>
                   </div>
 
                   <div className="md:w-1/3">
-                    <ul className="space-y-2">
+                    <ul className="grid grid-cols-1 gap-3">
                       {product.features.map((f, j) => (
-                        <li key={j} className="flex items-center gap-2 text-cream/60 text-sm">
-                          <span className="w-1.5 h-1.5 rounded-full bg-gold shrink-0" />
+                        <li key={j} className="flex items-center gap-3 text-dark text-sm font-medium">
+                          <div className="w-2 h-2 rounded-full bg-orange shrink-0" />
                           {f}
                         </li>
                       ))}
@@ -92,10 +95,10 @@ export default function ProdutosPage() {
                   <div className="md:ml-auto">
                     <Link
                       href="/contato"
-                      className="gold-gradient text-navy font-semibold px-6 py-3 rounded-xl text-sm hover:opacity-90 transition-all inline-flex items-center gap-2 group/btn"
+                      className="bg-dark text-white font-bold px-10 py-4 rounded-2xl text-base hover:bg-orange transition-all inline-flex items-center gap-3 group/btn hover:shadow-xl hover:shadow-orange/20"
                     >
                       Simular
-                      <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
+                      <ArrowRight size={18} className="group-hover/btn:translate-x-2 transition-transform" />
                     </Link>
                   </div>
                 </div>

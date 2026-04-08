@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Início", href: "/" },
@@ -28,23 +29,21 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-navy/95 backdrop-blur-md border-b border-gold/10 py-3 shadow-xl shadow-black/30"
+          ? "bg-white/90 backdrop-blur-md border-b border-orange/10 py-3 shadow-lg shadow-black/5"
           : "bg-transparent py-5"
       }`}
     >
       <nav className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-9 h-9 rounded-lg gold-gradient flex items-center justify-center shadow-lg shadow-gold/20">
-            <span className="text-navy font-bold text-lg font-serif">F</span>
-          </div>
-          <div className="flex flex-col leading-none">
-            <span className="text-cream font-serif text-lg font-semibold tracking-wide">
-              Five
-            </span>
-            <span className="text-gold text-xs tracking-[0.2em] uppercase font-medium">
-              Bank
-            </span>
+          <div className="relative w-32 h-10">
+            <Image
+              src="/logo.png"
+              alt="FiveCred Logo"
+              fill
+              className="object-contain"
+              priority
+            />
           </div>
         </Link>
 
@@ -54,13 +53,13 @@ export default function Navbar() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className={`text-sm tracking-wide transition-colors duration-200 hover:text-gold-light relative group ${
-                  pathname === link.href ? "text-gold" : "text-cream/70"
+                className={`text-sm font-medium tracking-wide transition-colors duration-200 hover:text-orange relative group ${
+                  pathname === link.href ? "text-orange" : "text-dark/70"
                 }`}
               >
                 {link.label}
                 <span
-                  className={`absolute -bottom-1 left-0 h-px bg-gold transition-all duration-300 ${
+                  className={`absolute -bottom-1 left-0 h-0.5 bg-orange transition-all duration-300 ${
                     pathname === link.href ? "w-full" : "w-0 group-hover:w-full"
                   }`}
                 />
@@ -73,13 +72,13 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-4">
           <Link
             href="/contato"
-            className="text-sm text-cream/70 hover:text-gold transition-colors"
+            className="text-sm font-medium text-dark/70 hover:text-orange transition-colors"
           >
             Acesse sua conta
           </Link>
           <Link
             href="/contato"
-            className="gold-gradient text-navy text-sm font-semibold px-5 py-2.5 rounded-lg hover:opacity-90 transition-all duration-200 shadow-lg shadow-gold/20"
+            className="orange-gradient text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:shadow-orange/20 hover:shadow-lg transition-all duration-200"
           >
             Abrir Conta
           </Link>
@@ -87,7 +86,7 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden text-cream/80 hover:text-gold transition-colors"
+          className="md:hidden text-dark/80 hover:text-orange transition-colors"
           onClick={() => setMobileOpen(!mobileOpen)}
         >
           {mobileOpen ? <X size={22} /> : <Menu size={22} />}
@@ -100,14 +99,14 @@ export default function Navbar() {
           mobileOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="bg-navy-light border-t border-gold/10 px-6 py-4 space-y-4">
+        <div className="bg-white border-t border-gray/10 px-6 py-4 space-y-4 shadow-xl">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className={`block text-sm py-2 transition-colors ${
-                pathname === link.href ? "text-gold" : "text-cream/70 hover:text-gold"
+              className={`block text-sm font-medium py-2 transition-colors ${
+                pathname === link.href ? "text-orange" : "text-dark/70 hover:text-orange"
               }`}
             >
               {link.label}
@@ -116,7 +115,7 @@ export default function Navbar() {
           <Link
             href="/contato"
             onClick={() => setMobileOpen(false)}
-            className="block gold-gradient text-navy text-sm font-semibold px-5 py-2.5 rounded-lg text-center mt-4"
+            className="block orange-gradient text-white text-sm font-semibold px-5 py-2.5 rounded-lg text-center mt-4"
           >
             Abrir Conta
           </Link>

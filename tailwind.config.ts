@@ -9,6 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        orange: {
+          DEFAULT: "#E8603D",
+          light: "#ff7b57",
+          dark: "#cf4b2d",
+        },
         navy: {
           DEFAULT: "#0a0e1a",
           light: "#111827",
